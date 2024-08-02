@@ -67,6 +67,8 @@ system_map=${modules_dir}/System.map
 # there is any bootloader installed.  If we detect that sdbootutil
 # package is installed, but the bootloader installation test fails,
 # then we assume that sdbootutil will be used.
+echo "XXXX rpm-script"
+ls -la /
 if [ -e "/usr/bin/sdbootutil" ] && { /usr/bin/sdbootutil is-installed || [ -e /.buildenv ]; } then
     is_sdbootutil=1
 fi
